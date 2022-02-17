@@ -2,7 +2,8 @@
     position: relative;
     background-image: url(../img/bg-equipment.png);
     background-repeat: no-repeat;
-    background-position: center 670px;
+    background-position: center 200px;
+    background-size: cover;
 
     &__triangle {
         position: absolute;
@@ -12,7 +13,6 @@
 
     &__container {
         padding-top: 200px;
-        padding-bottom: 120px;
     }
 
     &__headline {
@@ -27,8 +27,12 @@
     }
 
     &__video-container {
+        padding-left: 30px;
+        padding-right: 30px;
         display: flex;
         flex-direction: row-reverse;
+        padding-bottom: 120px;
+        min-height: 640px;
     }
 
     &__video-box {
@@ -44,7 +48,7 @@
         flex-basis: 50%;
         padding-top: 40px;
         padding-bottom: 40px;
-        padding-left: 80px;
+        padding-left: 120px;
     }
 
     &__sign {
@@ -57,10 +61,40 @@
     }
 
     &__img {
-        max-width: 90px;
+        max-width: 140px;
 
         &:not(:last-child) {
             margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .reviews {
+        background-size: unset;
+        background-position: center 670px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .reviews {
+        &__video-container {
+            min-height: 500px;
+        }
+
+        &__text-wrapper {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 100px;
+        }
+
+        &__sign {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        &__img {
+            max-width: 100px;
         }
     }
 }
@@ -81,6 +115,10 @@
             margin-bottom: 265px;
         }
 
+        &__video-container {
+            min-height: unset;
+        }
+
         &__text-wrapper {
             padding-left: 50px;
             padding-top: 25px;
@@ -88,7 +126,7 @@
         }
     
         &__img {
-            max-width: 70px;
+            max-width: 80px;
     
             &:not(:last-child) {
                 margin-right: 15px;
