@@ -1,0 +1,156 @@
+.advantages {
+    position: relative;
+    background: var(--gradient);
+
+    &__triangle {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        z-index: 10;
+        transform: scale(1, -1);
+        fill: var(--white);
+    }
+
+    &__container {
+        padding-top: 180px;
+        padding-bottom: 60px;
+    }
+
+    &__headline {
+        color: var(--white);
+    }
+
+    &__text--margin {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 140px;
+    }
+
+    &__block {
+        background-color: rgba(255, 255, 255, 0.1);;
+        padding: 30px;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: relative;
+
+        &::before {
+            content: '01';
+            font-family: 'PF DinDisplay Pro', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 100px;
+            line-height: 90px;
+            color: var(--black);
+            opacity: 0.1;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:last-child::before {
+            content: '02';
+        }
+    }
+
+    &__list-item {
+        list-style-type: disc;
+        margin-left: 27px;
+    }
+    
+    &__arrow {
+        margin-left: 10px;
+        transition: all 0.3s ease;
+    }
+
+    &__link {
+        &:hover .advantages__arrow{
+            margin-left: 20px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .advantages {
+        &__container {
+            padding-top: 120px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 22px;
+            
+            &--margin {
+                margin-top: 20px;
+            }
+        }
+
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin-bottom: 60px;
+        }
+
+        &__box {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            padding-left: 30px;
+            padding-right: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .advantages {
+        &__container {
+            padding-top: 65px;
+        }
+
+        &__text--margin {
+            margin-bottom: 30px;
+        }
+
+        &__wrapper {
+            grid-template-columns: unset;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        &__box {
+            grid-template-columns: unset;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        &__item {
+            padding-left: 20px;
+        }
+
+        &__link-wrapper {
+            text-align: center;
+        }
+    }
+}

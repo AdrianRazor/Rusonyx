@@ -1,0 +1,117 @@
+.footer {
+    background: var(--gradient);
+
+    &__container {
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+
+    &__headline {
+        margin-bottom: 40px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: end;
+        gap: 60px;
+    }
+
+    &__block {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        z-index: 10;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 6px;
+        padding-bottom: 10px;
+
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__label {
+        pointer-events: none;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        transition: all 0.2s ease;
+
+        font-family: "PF Din Text Cond Pro", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.5);
+
+        &--active {
+            top: -22px;
+            left: 0;
+            font-size: 16px;
+            line-height: 22px;
+            transition: all 0.2s ease;
+        }
+    }
+
+    &__button {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        &__wrapper {
+            grid-template-columns: 1fr 1fr 273px;
+        }
+
+        &__headline {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__container {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        &__headline {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        &__block {
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__button {
+            margin: auto;
+            margin-top: 60px;
+        }
+    }
+}

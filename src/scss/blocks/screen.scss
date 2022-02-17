@@ -1,0 +1,73 @@
+.screen {
+    background-image: url(../../img/bg-computers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__container {
+        padding-top: 220px;
+        padding-bottom: 298px;
+    }
+
+    &__text {
+        color: var(--white);
+        max-width: 450px;
+        width: 100%;
+    }
+
+    &__title {
+        max-width: 600px;
+        width: 100%;
+        margin-top: 38px;
+        margin-bottom: 60px;
+    }
+
+    &__triangle {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        z-index: 5;
+        fill: var(--white);
+    }
+}
+
+@media (max-width: 1024px) {
+    .screen {
+        &__container {
+            padding-top: 202px;
+            padding-bottom: 273px;
+        }
+
+        &__title {
+            max-width: 400px;
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+            max-width: 340px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .screen {
+        &__container {
+            padding-top: 170px;
+            padding-bottom: 230px;
+        }
+
+        &__title {
+            max-width: 320px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        &__text {
+            max-width: 320px;
+        }
+    }
+}

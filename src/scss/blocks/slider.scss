@@ -1,0 +1,77 @@
+.slider {
+    overflow: hidden;
+    
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 30px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+    }
+
+    &__company {
+        opacity: 0.5;
+        margin-bottom: 5px;
+    }
+
+    &__link {
+        color: var(--red);
+    }
+
+    &__review {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider {
+        &__wrapper {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 60px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        &__wrapper {
+            display: flex;
+            gap: 0;
+        }
+
+        &__review {
+            margin-top: 20px;
+        }
+
+        &__dots-block {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    
+        &__dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--black);
+            opacity: .1;
+    
+            &--active {
+                background-color: var(--red);
+                opacity: 1;
+            }
+    
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
+}
